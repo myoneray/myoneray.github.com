@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>Angular Bootstrap | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / Angular Bootstrap</p>
+		<div class="page_content mdcss">
+			<h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><p>本页介绍Angular初始化过程，以及如何在需要的时候手动初始化Angular。</p>
+<a id="more"></a>
+<h2 id="Angular-lt-script-gt-Tag"><a href="#Angular-lt-script-gt-Tag" class="headerlink" title="Angular&lt;script&gt;Tag"></a>Angular<code>&lt;script&gt;</code>Tag</h2><p>Angular自动初始化时,我们建议这样导入文件路径.<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:ng</span>=<span class="string">"http://angularjs.org"</span> <span class="attr">ng-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>将<code>script</code>标签放在页面底部。在页面末尾放置脚本标记可以提高应用程序加载时间，因为<abbr title="">加载angular.js脚本不会阻止HTML的加载</abbr>。<br>你可以从<a href="http://code.angularjs.org" target="_blank" rel="noopener">这儿</a>获取最新的代码。请不要将你的生产代码链接到此网址，因为它会暴露你网站上的安全漏洞。对于开发链接到我们的网站是好的。<blockquote>
+<p>选择<code>angular-[version].js</code>为可读的文件，适合开发和调试。<br>选择<code>angular-[version].min.js</code>为压缩的文件，适合在生产中使用。</p>
+</blockquote>
+</li>
+<li>如果你希望Angularjs自动引导你的应用程序，请将ng-app放置到应用程序的根目录，通常在<html>标签上。</html></li>
+<li>不推荐在旧版本的IE上使用angularjs。</li>
+</ol>
+<h2 id="自动初始化"><a href="#自动初始化" class="headerlink" title="自动初始化"></a>自动初始化</h2><p>angular在<code>DOMContentLoaded</code>事件时自动初始化或者当angular.js脚本被评估为<code>document.readyState</code>设置为“完成”。这这个时间点上，Angular寻找指定你的应用程序根目录的ngApp指令。如果找到ngApp指令，那么Angular将：</p>
+<ul>
+<li>加载与指令相关联的模块。</li>
+<li>创建应用程序注入器。</li>
+<li>编译处理ngApp指令的DOM作为编译的最基层。这允许你告诉angular只处理DOM的一部分作为一个Angular应用程序。</li>
+</ul>
+<p><img src="/img/concepts-startup.png" alt=""></p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="meta">&lt;!doctype html&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">"optionalModuleName"</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    I can add: </span><span class="template-variable">&#123;&#123; 1+2 &#125;&#125;</span><span class="xml">.</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>作为最佳实践，考虑在ng-app的相同元素上添加<code>ng-strict-di</code>指令：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="meta">&lt;!doctype html&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">ng-app</span>=<span class="string">"optionalModuleName"</span> <span class="attr">ng-strict-di</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    I can add: </span><span class="template-variable">&#123;&#123; 1+2 &#125;&#125;</span><span class="xml">.</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>这将确保你的应用程序中的所有服务都已正确注释。请参阅<a href="https://docs.angularjs.org/guide/di#using-strict-dependency-injection" target="_blank" rel="noopener">这儿</a> 了解<strong>依赖注入严格模式</strong>。</p>
+<h2 id="手动初始化"><a href="#手动初始化" class="headerlink" title="手动初始化"></a>手动初始化</h2><p>如果你需要更多地控制初始化过程，可以改用手动引导方法。当你需要这样做需要在Angular编译页面之前执行操作。</p>
+<p>这里是一个手动初始化Angular的例子：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="meta">&lt;!doctype html&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"MyController"</span>&gt;</span></span></span><br><span class="line"><span class="xml">    Hello </span><span class="template-variable">&#123;&#123;greetMe&#125;&#125;</span><span class="xml">!</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.angularjs.org/snapshot/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">    angular.module('myApp', [])</span></span><br><span class="line"><span class="xml">      .controller('MyController', ['$scope', function ($scope) &#123;</span></span><br><span class="line"><span class="xml">        $scope.greetMe = 'World';</span></span><br><span class="line"><span class="xml">      &#125;]);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    angular.element(function() &#123;</span></span><br><span class="line"><span class="xml">      angular.bootstrap(document, ['myApp']);</span></span><br><span class="line"><span class="xml">    &#125;);</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p> 注意: 要加载到注入器中的应用程序模块的名称作为angular.bootstrap函数的第二个参数。<br> 请注意，angular.bootstrap不会即时创建模块,只会在启动时创建模块,因此在作为参数传递之前，必须确保创建其所有的自定义模块。<br>你调用<code>angular.bootstrap()</code>,就已经加载到了所有自定义模块。你不能在应用程序启动后添加控制器，服务，指令等。</p>
+<blockquote>
+<p>注意：在手动引导应用程序时，不应使用<code>ng-app</code>指令。</p>
+</blockquote>
+<p>这是你的代码应该遵循的顺序：</p>
+<ol>
+<li>在页面和所有代码加载后，找到你的AngularJS应用程序的根元素，它通常是文档的根。</li>
+<li>调用<code>angular.bootstrap</code>将元素编译成可执行文件，双向绑定应用程序。</li>
+</ol>
+<h3 id="谨记"><a href="#谨记" class="headerlink" title="谨记"></a>谨记</h3><p>有几个事情要记住，不管自动或手动引导：</p>
+<ul>
+<li>虽然每页可以引导多个AngularJS应用程序，但不建议这么做。这可能会遇到问题，特别是与复杂的应用程序，所以提醒你需要谨慎。</li>
+<li>不要在具有使用转换的指令的元素上引导应用程序，例如<code>ngIf</code>，<code>ngInclude</code>和<code>ngView</code>。<br> 这样做会错误地放置应用程序<code>$rootElement</code>和应用程序的注入器，导致动画停止工作，并使应用程序外部无法访问注入器。</li>
+</ul>
+<h2 id="延迟引导"><a href="#延迟引导" class="headerlink" title="延迟引导"></a>延迟引导</h2><p>这个功能使得像Batarang和测试运行程序这样的工具可以在AngularJS的引导进程中，并在更多的模块中依赖注入进来.其可以替代或增加依赖注入服务以用于仪器化或模拟重度依赖性。<br>如果window.name包含前缀NG_DEFER_BOOTSTRAP！当angular.bootstrap被调用时，引导进程将被暂停，直到angular.resumeBootstrap（）被调用。<br>angular.resumeBootstrap（）采用一个可选的模块数组，应该添加到应用程序即将被引导的模块的原始列表中。</p>
+<p>en:<a href="https://docs.angularjs.org/guide/bootstrap" target="_blank" rel="noopener">https://docs.angularjs.org/guide/bootstrap</a></p>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/12/05/2016-12-05/">Prev</a>
+		
+		
+		<a href="/2016/12/01/2016-12-01/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

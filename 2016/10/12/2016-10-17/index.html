@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>博客主题修改部署问题 | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / 博客主题修改部署问题</p>
+		<div class="page_content mdcss">
+			<p>原博客主题修改完成后报错，及其决绝办法！<br><a id="more"></a></p>
+<p>原博客主题修改完成后报以下错：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">upsmart@upsmart-<span class="symbol">pc:</span>~<span class="regexp">/myone$ hexo s</span></span><br><span class="line"><span class="regexp">INFO  Start processing</span></span><br><span class="line"><span class="regexp">FATAL Something's wrong. Maybe you can find the solution here: http:/</span><span class="regexp">/hexo.io/docs</span><span class="regexp">/troubleshooting.html</span></span><br><span class="line"><span class="regexp">Error: watch /home</span><span class="regexp">/upsmart/myone</span><span class="regexp">/themes/yilia</span><span class="regexp">/node_modules/sass</span>-loader/node_modules/lodash/pull.js ENOSPC</span><br><span class="line">    at exports._errnoException (util.<span class="symbol">js:</span><span class="number">896</span>:<span class="number">11</span>)</span><br><span class="line">    at FSWatcher.start (fs.<span class="symbol">js:</span><span class="number">1423</span>:<span class="number">19</span>)</span><br><span class="line">    at Object.fs.watch (fs.<span class="symbol">js:</span><span class="number">1450</span>:<span class="number">11</span>)</span><br><span class="line">    at createFsWatchInstance (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:37:15)</span></span><br><span class="line">    at setFsWatchListener (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:80:15)</span></span><br><span class="line">    at FSWatcher.NodeFsHandler._watchWithNodeFs (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:228:14)</span></span><br><span class="line">    at FSWatcher.NodeFsHandler._handleFile (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:255:21)</span></span><br><span class="line">    at FSWatcher.&lt;anonymous&gt; (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:473:21)</span></span><br><span class="line">    at FSReqWrap.oncomplete (fs.<span class="symbol">js:</span><span class="number">117</span>:<span class="number">15</span>)</span><br><span class="line">FATAL watch /home/upsmart/myone/themes/yilia/node_modules/sass-loader/node_modules/lodash/pull.js ENOSPC</span><br><span class="line"><span class="symbol">Error:</span> watch /home/upsmart/myone/themes/yilia/node_modules/sass-loader/node_modules/lodash/pull.js ENOSPC</span><br><span class="line">    at exports._errnoException (util.<span class="symbol">js:</span><span class="number">896</span>:<span class="number">11</span>)</span><br><span class="line">    at FSWatcher.start (fs.<span class="symbol">js:</span><span class="number">1423</span>:<span class="number">19</span>)</span><br><span class="line">    at Object.fs.watch (fs.<span class="symbol">js:</span><span class="number">1450</span>:<span class="number">11</span>)</span><br><span class="line">    at createFsWatchInstance (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:37:15)</span></span><br><span class="line">    at setFsWatchListener (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:80:15)</span></span><br><span class="line">    at FSWatcher.NodeFsHandler._watchWithNodeFs (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:228:14)</span></span><br><span class="line">    at FSWatcher.NodeFsHandler._handleFile (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:255:21)</span></span><br><span class="line">    at FSWatcher.&lt;anonymous&gt; (<span class="regexp">/home/upsmart</span><span class="regexp">/myone/node</span>_modules/chokidar/<span class="class"><span class="keyword">lib</span>/<span class="title">nodefs</span>-<span class="title">handler</span>.<span class="title">js</span>:473:21)</span></span><br><span class="line">    at FSReqWrap.oncomplete (fs.<span class="symbol">js:</span><span class="number">117</span>:<span class="number">15</span>)</span><br></pre></td></tr></table></figure>
+<p>看出是node_modules 里面的文件出错，但实际部署不需要，使用命令移除：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rimraf</span> node_modules</span><br></pre></td></tr></table></figure></p>
+<p> 安装rimraf<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install <span class="keyword">node</span><span class="title">-rimraf</span></span><br></pre></td></tr></table></figure></p>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/10/21/2016-10-21/">Prev</a>
+		
+		
+		<a href="/2016/09/12/2016-10-13/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

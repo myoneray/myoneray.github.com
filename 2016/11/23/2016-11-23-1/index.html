@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>Angular指令数据绑定 | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / Angular指令数据绑定</p>
+		<div class="page_content mdcss">
+			<blockquote>
+<p>准备项目示例<br> 参考源码： <a href="https://github.com/momicafe/pro-angularjs/blob/master/Chapter%2009/Listing%2001.html" target="_blank" rel="noopener">https://github.com/momicafe/pro-angularjs/blob/master/Chapter%2009/Listing%2001.html</a><br> <a id="more"></a></p>
+</blockquote>
+<ul>
+<li>Angular数据绑定有几种类型?</li>
+<li>Angular如何修改内联绑定符  <code></code> ?</li>
+<li>Angular如何隐藏模板标记?</li>
+<li>Angular scope如何工作?</li>
+<li><p>Angular ng-bind 与 ng-bind-template区别?</p>
+<pre><code><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">     There are <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-bind</span>=<span class="string">"todos.length"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> items</span></span><br><span class="line"><span class="xml"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-bind-template</span>=</span></span></span><br><span class="line"><span class="xml">      "First: </span><span class="template-variable">&#123;&#123;todos[0].<span class="builtin-name">action</span>&#125;&#125;</span><span class="xml">. Second: </span><span class="template-variable">&#123;&#123;todos[1].<span class="builtin-name">action</span>&#125;&#125;</span><span class="xml">"&gt;</span></span><br><span class="line"><span class="xml"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+说明：`ng-bind` 只能处理单个数据绑定表达式， `ng-bind-template`可以处理多个数据绑定。所以一般用内联绑定符   {{  和 }}  （双括号，草拟娘的，hexo编译会自动屏蔽双大括号这个符号，MB~）  绑定数据。 傻子才会用这两个。O(∩_∩)O~
+</code></pre></li>
+<li><p>asd</p>
+</li>
+</ul>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/11/30/2016-11-30-2/">Prev</a>
+		
+		
+		<a href="/2016/11/09/2016-11-23-2/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

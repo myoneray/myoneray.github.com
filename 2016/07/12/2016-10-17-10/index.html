@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>node 安装 | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / node 安装</p>
+		<div class="page_content mdcss">
+			<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><blockquote>
+<p>$  nvm uninstall –lts<br>$  sudo apt-get remove nodejs<br>$  apt-get autoremove nodejs</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="删除node"><a href="#删除node" class="headerlink" title="删除node"></a>删除node</h3><blockquote>
+<p>$  sudo find ~/ -name &lt;查找的文件名字&gt;</p>
+</blockquote>
+<h3 id="删除npm"><a href="#删除npm" class="headerlink" title="删除npm"></a>删除npm</h3><h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><blockquote>
+<p>$  curl -o- https:###raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash</p>
+</blockquote>
+<h3 id="将这些信息复制到-bashrc-profile-or-zshrc中"><a href="#将这些信息复制到-bashrc-profile-or-zshrc中" class="headerlink" title="将这些信息复制到~/.bashrc, ~/.profile, or ~/.zshrc中"></a>将这些信息复制到~/.bashrc, ~/.profile, or ~/.zshrc中</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">NVM_DIR</span>=<span class="string">"<span class="variable">$HOME</span>/.nvm"</span></span><br><span class="line">[ -s <span class="string">"<span class="variable">$NVM_DIR</span>/nvm.sh"</span> ] &amp;&amp; . <span class="string">"<span class="variable">$NVM_DIR</span>/nvm.sh"</span> # This loads nvm</span><br></pre></td></tr></table></figure>
+<h3 id="应用源文件"><a href="#应用源文件" class="headerlink" title="应用源文件"></a>应用源文件</h3><blockquote>
+<p>$  source 　/.bashrc, ~/.profile, or ~/.zshrc</p>
+</blockquote>
+<h3 id="验证安装是否成功"><a href="#验证安装是否成功" class="headerlink" title="验证安装是否成功"></a>验证安装是否成功</h3><blockquote>
+<p>$  command -v nvm</p>
+</blockquote>
+<h3 id="查看所有的node版本"><a href="#查看所有的node版本" class="headerlink" title="查看所有的node版本"></a>查看所有的node版本</h3><blockquote>
+<p>$  nvm ls-remote</p>
+</blockquote>
+<h3 id="安装node版本"><a href="#安装node版本" class="headerlink" title="安装node版本"></a>安装node版本</h3><blockquote>
+<p>$  nvm install –lts　　</p>
+</blockquote>
+<h3 id="查看安装是否成功"><a href="#查看安装是否成功" class="headerlink" title="查看安装是否成功"></a>查看安装是否成功</h3><blockquote>
+<p>$  node -v<br>$  npm -v</p>
+</blockquote>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><blockquote>
+<p>$  npm install -g hexo-cli</p>
+</blockquote>
+<h3 id="初始化博客信息"><a href="#初始化博客信息" class="headerlink" title="初始化博客信息"></a>初始化博客信息</h3><blockquote>
+<p>$  hexo init <folder><br>$  cd <folder></folder></folder></p>
+</blockquote>
+<h3 id="安装博客需要的插件"><a href="#安装博客需要的插件" class="headerlink" title="安装博客需要的插件"></a>安装博客需要的插件</h3><blockquote>
+<p>$  npm install</p>
+</blockquote>
+<h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><blockquote>
+<p>$ hexo generate（hexo g也可以）</p>
+</blockquote>
+<h3 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h3><blockquote>
+<p>$  hexo server<br>Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press <code>Ctrl+C</code> to stop.</p>
+</blockquote>
+<h3 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h3><blockquote>
+<p>gedit  _config.yml</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">     <span class="attribute">type</span>: git</span><br><span class="line">     <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:myoneray/myoneray.github.com.git</span><br><span class="line">     <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+<h3 id="然后执行命令："><a href="#然后执行命令：" class="headerlink" title="然后执行命令："></a>然后执行命令：</h3><blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<h3 id="设置当前node版本"><a href="#设置当前node版本" class="headerlink" title="设置当前node版本"></a>设置当前node版本</h3><blockquote>
+<p>nvm use –delete-prefix v6.0.0</p>
+</blockquote>
+<h3 id="设置当前默认的node版本"><a href="#设置当前默认的node版本" class="headerlink" title="设置当前默认的node版本"></a>设置当前默认的node版本</h3><p>nvm alias default v6.0.0</p>
+<h3 id="获取npm-安装的路径"><a href="#获取npm-安装的路径" class="headerlink" title="获取npm 安装的路径"></a>获取npm 安装的路径</h3><p>npm config get prefix</p>
+<h3 id="查看当前PATH"><a href="#查看当前PATH" class="headerlink" title="查看当前PATH"></a>查看当前PATH</h3><p>echo  $PATH</p>
+<h3 id="安装tree"><a href="#安装tree" class="headerlink" title="安装tree"></a>安装tree</h3><p>sudo apt-get install tree</p>
+<h3 id="显示所有的npm-默认配置"><a href="#显示所有的npm-默认配置" class="headerlink" title="显示所有的npm　默认配置"></a>显示所有的npm　默认配置</h3><p>npm config ls -l</p>
+<h3 id="显示npm配置"><a href="#显示npm配置" class="headerlink" title="显示npm配置"></a>显示npm配置</h3><p>npm config list</p>
+<h3 id="npm找不到"><a href="#npm找不到" class="headerlink" title="npm找不到"></a>npm找不到</h3><p>n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local</p>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/09/12/2016-10-13/">Prev</a>
+		
+		
+		<a href="/2016/02/17/2016-10-17-2/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>path.resolve([...paths])解释 | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / path.resolve([...paths])解释</p>
+		<div class="page_content mdcss">
+			<h1 id="path-resolve"><a href="#path-resolve" class="headerlink" title="path.resolve"></a>path.resolve</h1><p>nodejs官方文档原文：<a href="https://nodejs.org/api/path.html#path_path_resolve_paths" target="_blank" rel="noopener">https://nodejs.org/api/path.html#path_path_resolve_paths</a></p>
+<p>初始添加在版本: v0.3.4</p>
+<ul>
+<li>paths <string> 路径或路径段</string></li>
+<li><p>返回: <string><code>path.resolve（）</code>方法将一系列路径或路径段解析为绝对路径。</string></p>
+<a id="more"></a>
+</li>
+<li><p>给定的路径序列从右到左进行处理，每个后续路径前置直到构造绝对路径。<br>例如，给定路径段序列：<code>/ foo，/ bar，baz，</code>调用<code>path.resolve（&#39;/ foo&#39;，&#39;/ bar&#39;，&#39;baz&#39;）</code>将返回<code>/ bar / baz</code>。</p>
+</li>
+<li>如果在处理所有给定路径段之后还没有生成绝对路径，则使用当前工作目录。</li>
+<li>生成的路径将进行规范化，并删除尾部斜杠，除非将路径解析为根目录。</li>
+<li>忽略零长度路径段。</li>
+<li>如果没有传递路径段，path.resolve（）将返回当前工作目录的绝对路径。</li>
+</ul>
+<p>例如：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'./baz'</span>)</span><br><span class="line"><span class="regexp">//</span> Returns: <span class="string">'/foo/bar/baz'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'/foo/bar'</span>, <span class="string">'/tmp/file/'</span>)</span><br><span class="line"><span class="regexp">//</span> Returns: <span class="string">'/tmp/file'</span></span><br><span class="line"></span><br><span class="line">path.resolve(<span class="string">'wwwroot'</span>, <span class="string">'static_files/png/'</span>, <span class="string">'../gif/image.gif'</span>)</span><br><span class="line"><span class="regexp">//</span> 如果当前工作目录是 <span class="regexp">/home/my</span>self<span class="regexp">/node,返回 '/</span>home<span class="regexp">/myself/</span>node<span class="regexp">/wwwroot/</span>static_files<span class="regexp">/gif/im</span>age.gif<span class="string">'</span></span><br></pre></td></tr></table></figure></p>
+<p>如果任何参数不是字符串，则抛出<code>TypeError</code>。</p>
+<h4 id="Class-TypeError"><a href="#Class-TypeError" class="headerlink" title="Class: TypeError"></a>Class: TypeError</h4><p>Error子类，指示提供的参数不是允许的类型。例如，将函数传递给期望字符串的参数将被视为TypeError。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'url'</span>).parse(<span class="function"><span class="params">()</span> =&gt;</span> &#123; &#125;);</span><br><span class="line">  <span class="comment">// throws TypeError, since it expected a string</span></span><br></pre></td></tr></table></figure></p>
+<p>Node.js将立即生成并抛出TypeError实例作为参数验证的形式。</p>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/11/30/2016-11-30-1/">Prev</a>
+		
+		
+		<a href="/2016/11/23/2016-11-23-1/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

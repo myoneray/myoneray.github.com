@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>UI-Router for Angular 1 | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / UI-Router for Angular 1</p>
+		<div class="page_content mdcss">
+			<h1 id="AngularUI库提供的最有用的库之一：UI-ROUTER"><a href="#AngularUI库提供的最有用的库之一：UI-ROUTER" class="headerlink" title="AngularUI库提供的最有用的库之一：UI-ROUTER"></a>AngularUI库提供的最有用的库之一：UI-ROUTER</h1><p>本页介绍UI-ROUTER。</p>
+<a id="more"></a>
+<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>UI-Router是在AngularJS中路由的规范标准。<br>受到Angula路由器<code>$route</code>和<a href="https://guides.emberjs.com/v2.5.0/routing/" target="_blank" rel="noopener">Ember路由器</a>的影响，UI-Router已成为在Angular 1中路由非简单应用程序的标准选择。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li><p>NPM</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save angular-ui-router</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令行<br>向项目中添加最新的预发布：<code>npm install --save angular-ui-router@next</code><br>向项目中添加特定版本：<code>npm install --save angular-ui-router@1.0.0-beta.1</code></p>
+</li>
+<li><p>在HTML中用<code>&lt;script&gt;</code>标签<br>最新的预发布: <code>&lt;script src=&quot;//unpkg.com/angular-ui-router/release/angular-ui-router.min.js&quot;&gt;</code><br>特定版本: <code>&lt;script src=&quot;//unpkg.com/angular-ui-router@0.3.1/release/angular-ui-router.js&quot;&gt;</code></p>
+</li>
+<li><p>bower</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">bower</span> <span class="selector-tag">install</span> <span class="selector-tag">angular-ui-router</span><span class="selector-id">#0</span><span class="selector-class">.3</span><span class="selector-class">.1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>将ui.router注入到应用中<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">angulat.<span class="keyword">module</span>(<span class="string">'app'</span>,[<span class="string">'ui.router'</span>]);</span><br></pre></td></tr></table></figure></p>
+<p>和<code>angular</code>内置服务<code>ngRouter</code>不同，<code>ui-router</code>是基于状态工作的，不是简单的url,因此可以将其镶嵌在视图中。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> ng-controller=<span class="string">"DemoController"</span>&gt;</span><br><span class="line">  &lt;<span class="keyword">div</span> ui-view&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>ng-view ==&gt; ui-view</li>
+<li>ui-view的内置路由和状态有关系，所以只需要关心应用处于那种状态。</li>
+<li>允许视图嵌套。</li>
+</ul>
+<p>用<code>.config</code>定义路由。将路由设置在 <strong>$routerProvider</strong> 上，而不是$stateProvider。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home',</span><br><span class="line">        template: require('./index.html'),</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这一步给路由配置了一个home的状态，当用户导航到/home时，应用程序会处于home状态，进而加载template中配置的index页面。</p>
+<h1 id="1-template-templateUrl-templateProvider"><a href="#1-template-templateUrl-templateProvider" class="headerlink" title="1.template,templateUrl,templateProvider"></a>1.template,templateUrl,templateProvider</h1><p>视图设置模板的方式有三种：</p>
+<ul>
+<li>template：一个html字符串 OR 返回HTML的函数</li>
+<li>templateUrl：一个模板路径 OR 返回模板路径的函数</li>
+<li>templateProvider： 一个返回HTML字符的函数</li>
+</ul>
+<p>例如：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$stateProvider</span><br><span class="line">  .state(<span class="string">'app'</span>, &#123;</span><br><span class="line">    url: <span class="string">'/home'</span>,</span><br><span class="line">    <span class="comment">/*<span class="doctag">@ngInject</span>*/</span></span><br><span class="line">    templateProvider: ($q) =&gt; &#123;</span><br><span class="line">        let promise = $q((resolve) =&gt; &#123;</span><br><span class="line">            <span class="keyword">require</span>.ensure([], <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                resolve(<span class="keyword">require</span>(<span class="string">'./index.html'</span>));</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> promise;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="2-controller"><a href="#2-controller" class="headerlink" title="2.controller"></a>2.controller</h1><p>  为视图关联控制器，如果没有视图则不会创建该控制器。</p>
+<h1 id="3-resolve"><a href="#3-resolve" class="headerlink" title="3.resolve"></a>3.resolve</h1><p>在angular-ui-router中resolve是一个对象：<br>其中：</p>
+<ul>
+<li>键就是你要注入到控制器中依赖的名称。</li>
+<li>值就是待解析的这个factories。</li>
+</ul>
+<blockquote>
+<p>如果传入的是一个字符串，angular-ui-router会和已经注册的服务进行匹配。<br>如果传入的是一个函数，angular-ui-router则会注册这个函数，函数返回值就是依赖。<br>如果传入的是一个promise，angular-ui-router会在控制器实例化之前解析，其值会被注册到控制器中。</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$stateProvider</span><br><span class="line">    .state(<span class="string">'home'</span>, &#123;</span><br><span class="line">        url: <span class="string">'/home'</span>,</span><br><span class="line">        template: <span class="keyword">require</span>(<span class="string">'./index.html'</span>),</span><br><span class="line">        controller: <span class="string">'AppController'</span>,</span><br><span class="line">        controllerAs: <span class="string">'ctrl'</span>,</span><br><span class="line">        resolve: &#123;</span><br><span class="line">            <span class="comment">/*<span class="doctag">@ngInject</span>*/</span></span><br><span class="line">            load: ($q, $ocLazyLoad) =&gt; &#123;</span><br><span class="line">                let appControllerPromise = $q((resolve) =&gt; &#123;</span><br><span class="line">                    <span class="keyword">require</span>.ensure([], () =&gt; &#123;</span><br><span class="line">                        let module = <span class="keyword">require</span>(<span class="string">'./app.controller'</span>); <span class="comment">//babel6 export default</span></span><br><span class="line">                        $ocLazyLoad.load(&#123;</span><br><span class="line">                            name: module.name</span><br><span class="line">                        &#125;);</span><br><span class="line">                        resolve(module);</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;);</span><br><span class="line">                <span class="keyword">return</span> $q.all([appControllerPromise]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="4-url"><a href="#4-url" class="headerlink" title="4.url"></a>4.url</h1><p>给应用程序的状态分配一个唯一URL。URL通过状态导航应用，而不是简单的通过URL导航。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home',</span><br><span class="line">        template: require('./index.html'),</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>当用户导航到/home时，应用程序会处于home状态，进而加载template中配置的index页面将其填充到ui-view指令处。</p>
+<h3 id="4-1url参数"><a href="#4-1url参数" class="headerlink" title="4.1url参数"></a>4.1url参数</h3><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home/:indexId',</span><br><span class="line">        template: require('./index.html'),</span><br><span class="line">        controller:(<span class="variable">$scope</span>,<span class="variable">$stateParams</span>)=&gt;&#123;</span><br><span class="line">            <span class="variable">$scope</span>.indexId=<span class="variable">$stateParams</span>.indexId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>当用户访问到 <code>/home/1</code>，<code>$stateParams.indexId</code>会变成<code>1</code>，因为<code>$stateParams</code>为<code>{indexId:1}</code>。</p>
+<p>还可以用不同的语法：<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home/&#123;indexId&#125;',</span><br><span class="line">        template: require('./index.html'),</span><br><span class="line">        controller:(<span class="variable">$scope</span>,<span class="variable">$stateParams</span>)=&gt;&#123;</span><br><span class="line">            <span class="variable">$scope</span>.indexId=<span class="variable">$stateParams</span>.indexId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>还可以用正则：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$stateProvider</span><br><span class="line">    .state(<span class="string">'home'</span>, &#123;</span><br><span class="line">        url: <span class="string">'/home/&#123;indexId:[0-9a-fA-f]&#123;6&#125;&#125;'</span>,<span class="comment">//只能匹配十六进制的indexId</span></span><br><span class="line">        template: <span class="keyword">require</span>(<span class="string">'./index.html'</span>),</span><br><span class="line">        controller:($scope,$stateParams)=&gt;&#123;</span><br><span class="line">            $scope.indexId=$stateParams.indexId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意不能使用正则捕获数组。</p>
+</blockquote>
+<p>还可以在路由中指定查询参数：<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home/inbox?sort=ascenging',</span><br><span class="line">        template: require('./index.html'),</span><br><span class="line">        controller:(<span class="variable">$scope</span>,<span class="variable">$stateParams</span>)=&gt;&#123;</span><br><span class="line">            <span class="variable">$scope</span>.indexId=<span class="variable">$stateParams</span>.indexId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="5-嵌套路由"><a href="#5-嵌套路由" class="headerlink" title="5.嵌套路由"></a>5.嵌套路由</h1><p>一个页面包含多个ui-view。<br>例如：在home的视图中，点击show billing链接将it’s billing! 加载到其下方。<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        url: '/home/:inbox',</span><br><span class="line">        template: `</span><br><span class="line">        <span class="variable">&lt;div&gt;</span></span><br><span class="line">            <span class="variable">&lt;a ui-sref="home.billing"&gt;</span>show billing&lt;/a&gt;</span><br><span class="line">            <span class="variable">&lt;div ui-view&gt;</span>&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;`,</span><br><span class="line">        controller:(<span class="variable">$scope</span>,<span class="variable">$stateParams</span>)=&gt;&#123;</span><br><span class="line">            <span class="variable">$scope</span>.indexId=<span class="variable">$stateParams</span>.indexId;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="keyword">state</span>('home.billing', &#123;</span><br><span class="line">        url: '/billing',</span><br><span class="line">        template: `<span class="variable">&lt;div&gt;</span> it's billing! &lt;/div&gt;`</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>/home/1 匹配第一个<code>/home/:inbox</code>路由状态</li>
+<li>/home/1/billing 匹配第二个<code>home.billing</code>路由状态</li>
+</ul>
+<h1 id="6-params"><a href="#6-params" class="headerlink" title="6.params"></a>6.params</h1><h1 id="7-views"><a href="#7-views" class="headerlink" title="7.views"></a>7.views</h1><p>angular-ui-router的多命名视图。<br>在一个独立的视图中可以设置多个要引用的视图：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span>&gt;</span><br><span class="line">  &lt;<span class="keyword">div</span> ui-views=<span class="string">"iface"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">  &lt;<span class="keyword">div</span> ui-views=<span class="string">"billing"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">  &lt;<span class="keyword">div</span> ui-views=<span class="string">"account"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>设置views参数,template,templateUrl,templateProvider就会被忽略。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$stateProvider</span><br><span class="line">    .state(<span class="string">'home'</span>, &#123;</span><br><span class="line">      views:&#123;</span><br><span class="line">      <span class="string">'iface'</span>:&#123;  </span><br><span class="line">        template: <span class="built_in">require</span>(<span class="string">'./index.html'</span>),</span><br><span class="line">        controller:<span class="function"><span class="params">($scope)</span>=&gt;</span>&#123;&#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      <span class="string">'billing'</span>:&#123;  </span><br><span class="line">        template: <span class="built_in">require</span>(<span class="string">'./index.html'</span>),</span><br><span class="line">        controller:<span class="function"><span class="params">($scope)</span>=&gt;</span>&#123;&#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      <span class="string">'account'</span>:&#123;  </span><br><span class="line">        template: <span class="built_in">require</span>(<span class="string">'./index.html'</span>),</span><br><span class="line">        controller:<span class="function"><span class="params">($scope)</span>=&gt;</span>&#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="8-abstract"><a href="#8-abstract" class="headerlink" title="8.abstract"></a>8.abstract</h1><p>  抽象模板不能直接被激活，可以被字节点激活。</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$stateProvider</span></span><br><span class="line">    .<span class="keyword">state</span>('home', &#123;</span><br><span class="line">        abstract:true, //父设置abstract属性：抽象模板</span><br><span class="line">        url: '/home',</span><br><span class="line">        template: `<span class="variable">&lt;div&gt;</span><span class="variable">&lt;div ui-view&gt;</span>&lt;/div&gt;&lt;/div&gt;`</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="keyword">state</span>('home.billing', &#123;</span><br><span class="line">        url: '/billing',//子节点</span><br><span class="line">        template: `<span class="variable">&lt;div&gt;</span> it's billing! &lt;/div&gt;`</span><br><span class="line">    &#125;</span><br><span class="line">    .<span class="keyword">state</span>('home.account', &#123;</span><br><span class="line">        url: '/account',//子节点</span><br><span class="line">        template: `<span class="variable">&lt;div&gt;</span> it's account! &lt;/div&gt;`</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="9-onEnter-onExit"><a href="#9-onEnter-onExit" class="headerlink" title="9.onEnter , onExit"></a>9.onEnter , onExit</h1><p>  视图进入，或者离开状态时触发的行为。</p>
+<h1 id="10-data状态传递参数"><a href="#10-data状态传递参数" class="headerlink" title="10.data状态传递参数"></a>10.data状态传递参数</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$stateProvider.state(<span class="string">'app'</span>, &#123;</span><br><span class="line">    <span class="keyword">abstract</span>: <span class="keyword">true</span>,</span><br><span class="line">    <span class="comment">/*<span class="doctag">@ngInject</span>*/</span></span><br><span class="line">    templateProvider: ($q) =&gt; &#123;</span><br><span class="line">        let promise = $q((resolve) =&gt; &#123;</span><br><span class="line">            <span class="keyword">require</span>.ensure([], <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                resolve(<span class="keyword">require</span>(<span class="string">'./index.html'</span>));</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> promise;</span><br><span class="line">    &#125;,</span><br><span class="line">    controller: <span class="string">'AppController'</span>,</span><br><span class="line">    controllerAs: <span class="string">'ctrl'</span>,</span><br><span class="line">    resolve: &#123;&#125;,</span><br><span class="line">    data : &#123;</span><br><span class="line">        title : <span class="string">'首页'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>en：<a href="https://ui-router.github.io/ng1/" target="_blank" rel="noopener">https://ui-router.github.io/ng1/</a></p>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2018/05/04/2018-05-04/">Prev</a>
+		
+		
+		<a href="/2016/12/05/2016-12-05/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>

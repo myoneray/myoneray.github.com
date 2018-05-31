@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <title>npm | ٩◔̯◔۶|MYONE</title>
+        
+        <link rel="alternate" href="/atom.xml" title="٩◔̯◔۶|MYONE" type="application/atom+xml">
+        
+        
+        <link rel="icon" href="//favicon.png">
+        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/markdown.css">
+    </head>
+    <body onscroll="scrollYListener()">
+        <div class="wrapper">
+            <div class="mobile_menu_btn">
+  <button id="mobile_menu_btn" class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+  </button>
+</div>
+<div class="slide_menu">
+  <nav class="nav_scroll">
+    <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+    </ul>
+  </nav>
+  <div class="social">
+    <ul class="clearfix">
+      
+      
+      <li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <div class="copyright">
+    &copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://chengkang.me/" target="_blank">MYONERAY</a>
+  </div>
+</div>
+<header>
+  <div class="mobile_navbar clearfix">
+    
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    
+  </div>
+  <div class="row clearfix no_form">
+    <div class="logo">
+      <a href="/">٩◔̯◔۶|MYONE</a>
+    </div>
+    <nav class="nav_scroll">
+      <ul class="clearfix">
+      
+      
+      <li class=""> <a href="/">Home</a> </li>
+      
+      
+      <li class="active dotted"> <a href="/archives">Archive</a> </li>
+      
+      </ul>
+    </nav>
+  </div>
+</header>
+            <div class="section" id="Search">
+	<div class="section_content">
+		<h3>
+		Search
+		<br>
+		Find out if your question is answered here
+		</h3>
+		<div id="search-content" class="search-content-modal unexpanded">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="text" id="search-input" placeholder="Enter Keyword" >
+					<div class="magnifying-glass" id="search-button" >
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 500 500">
+						<path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"></path>
+					</svg>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">Found 0 match(es):</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
+
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
+<div class="section" id="Post">
+	<div class="section_content">
+		<p class="breadcrumb"><a href="/">Q&amp;A</a> / npm</p>
+		<div class="page_content mdcss">
+			<h3 id="淘宝镜像："><a href="#淘宝镜像：" class="headerlink" title="淘宝镜像："></a>淘宝镜像：</h3><blockquote>
+<p>–registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</blockquote>
+<a id="more"></a>
+<p>镜像使用方法（三种办法任意一种都能解决问题，建议使用第三种，将配置写死，下次用的时候配置还在）:</p>
+<h5 id="1-通过config命令"><a href="#1-通过config命令" class="headerlink" title="1.通过config命令"></a>1.通过config命令</h5><blockquote>
+<p>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>npm info underscore （如果上面配置正确这个命令会有字符串response）</p>
+</blockquote>
+<h5 id="2-命令行指定"><a href="#2-命令行指定" class="headerlink" title="2.命令行指定"></a>2.命令行指定</h5><blockquote>
+<p>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> info underscore</p>
+</blockquote>
+<h5 id="3-编辑-npmrc-加入下面内容"><a href="#3-编辑-npmrc-加入下面内容" class="headerlink" title="3.编辑 ~/.npmrc 加入下面内容"></a>3.编辑 ~/.npmrc 加入下面内容</h5><blockquote>
+<p>registry = <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</blockquote>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h5 id="安装包，默认会安装最新的版本"><a href="#安装包，默认会安装最新的版本" class="headerlink" title="安装包，默认会安装最新的版本"></a>安装包，默认会安装最新的版本</h5><blockquote>
+<p>npm install gulp</p>
+</blockquote>
+<h5 id="安装指定版本"><a href="#安装指定版本" class="headerlink" title="安装指定版本"></a>安装指定版本</h5><blockquote>
+<p>npm install <a href="mailto:gulp@3.9.1" target="_blank" rel="noopener">gulp@3.9.1</a></p>
+</blockquote>
+<h5 id="S-–save-安装包信息将加入到dependencies（生产阶段的依赖）"><a href="#S-–save-安装包信息将加入到dependencies（生产阶段的依赖）" class="headerlink" title="-S, –save 安装包信息将加入到dependencies（生产阶段的依赖）"></a>-S, –save 安装包信息将加入到dependencies（生产阶段的依赖）</h5><blockquote>
+<p>npm install gulp –save 或 npm install gulp -S</p>
+</blockquote>
+<h5 id="package-json-文件的-dependencies-字段："><a href="#package-json-文件的-dependencies-字段：" class="headerlink" title="package.json 文件的 dependencies 字段："></a>package.json 文件的 dependencies 字段：</h5><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="D-–save-dev-安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它"><a href="#D-–save-dev-安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它" class="headerlink" title="-D, –save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它"></a>-D, –save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它</h5><blockquote>
+<p>npm install gulp –save-dev 或 npm install gulp -D<br>package.json 文件的 devDependencies字段：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="O-–save-optional-安装包信息将加入到optionalDependencies（可选阶段的依赖）"><a href="#O-–save-optional-安装包信息将加入到optionalDependencies（可选阶段的依赖）" class="headerlink" title="-O, –save-optional 安装包信息将加入到optionalDependencies（可选阶段的依赖）"></a>-O, –save-optional 安装包信息将加入到optionalDependencies（可选阶段的依赖）</h5><blockquote>
+<p>npm install gulp –save-optional 或 npm install gulp -O<br>package.json 文件的optionalDependencies字段：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"optionalDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="E-–save-exact-精确安装指定模块版本"><a href="#E-–save-exact-精确安装指定模块版本" class="headerlink" title="-E, –save-exact 精确安装指定模块版本"></a>-E, –save-exact 精确安装指定模块版本</h5><blockquote>
+<p>npm install gulp –save-exact 或 npm install gulp -E<br>输入命令npm install gulp -ES，留意package.json 文件的 dependencies 字段，以看出版本号中的^消失了<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"3.9.1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>模块的依赖都被写入了package.json文件后，他人打开项目的根目录（项目开源、内部团队合作），使用npm install命令可以根据dependencies配置安装所有的依赖包</p>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<h5 id="本地安装（local）"><a href="#本地安装（local）" class="headerlink" title="本地安装（local）"></a>本地安装（local）</h5><blockquote>
+<p>npm install gulp</p>
+</blockquote>
+<h5 id="全局安装（global）-使用-g-或-–global"><a href="#全局安装（global）-使用-g-或-–global" class="headerlink" title="全局安装（global）,使用 -g 或 –global"></a>全局安装（global）,使用 -g 或 –global</h5><blockquote>
+<p>npm install gulp -g<br>npm uninstall 卸载模块</p>
+</blockquote>
+<h5 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h5><blockquote>
+<p>npm uninstall [&lt;@scope&gt;/]<pkg>[@<version>]… [-S|–save|-D|–save-dev|-O|–save-optional]<br>aliases: remove, rm, r, un, unlink</version></pkg></p>
+</blockquote>
+<h5 id="如卸载开发版本的模块"><a href="#如卸载开发版本的模块" class="headerlink" title="如卸载开发版本的模块"></a>如卸载开发版本的模块</h5><blockquote>
+<p>npm uninstall gulp –save-dev</p>
+</blockquote>
+
+		</div>
+	</div>
+
+	
+
+	
+	
+</div>
+
+	
+	
+	
+	<div class="section" id="Pagenation">
+		
+		<a href="/2016/07/12/2016-10-17-10/">Prev</a>
+		
+		
+		<a href="/2016/02/16/2016-10-19/">Next</a>
+		
+	</div>
+	
+
+            <footer>
+	<div class="footer_wrap">
+		<div class="social">
+			<ul class="clearfix">
+				
+				
+				<li> <a href="http://github.com/myoneray" target="_blank"> <img src="/img/GitHub.png"> </a> </li>
+				
+				
+				
+				
+			</ul>
+		</div>
+		<img src="/img/line.jpg">
+		<div class="copyright">
+			&copy; 2018 ٩◔̯◔۶|MYONE | Provided By  <a title="MYONERAY" href="http://wang-ming.cc/" target="_blank">MYONERAY</a>
+		</div>
+	</div>
+</footer>
+        </div>
+        <script type="text/javascript">
+        function scrollYListener() {
+        var searchHeight = parseInt(getComputedStyle(document.getElementById("Search")).height)
+        var width = document.documentElement.clientWidth;
+        var supportPageOffset = window.pageXOffset !== undefined;
+        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+        var scrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+        if (scrollY >= searchHeight-10) {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#cd4b4b";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#cd4b4b";
+        } else {
+        document.getElementsByTagName('header')[0].style.backgroundColor = "#4f8e8e";
+        document.getElementsByClassName('logo')[0].style.backgroundColor = "#4f8e8e";
+        }
+        }
+        var isMenuExpanded = false;
+        document.getElementById("mobile_menu_btn").onclick = function toggleMobileMenu() {
+        if (isMenuExpanded) {
+        document.getElementsByClassName('slide_menu')[0].className = "slide_menu";
+        } else {
+        document.getElementsByClassName('slide_menu')[0].className += " mobile_menu_active";
+        }
+        isMenuExpanded = !isMenuExpanded;
+        }
+        </script>
+        
+        
+    </body>
+</html>
